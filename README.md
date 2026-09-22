@@ -6,7 +6,7 @@
 
 This repository documents a governance matter that has remained unresolved for twenty years. It is not a polemic. It is a record — of submissions made, of acknowledgements received, and of determinations never issued. The materials here are presented plainly, for anyone who wishes to look.
 
-A structural browser-enabled view of the full evidentiary corpus is available at **[dr-crunch.github.io/sitemap](https://dr-crunch.github.io/sitemap)**. Follow the Twitter account for timely posts regarding the matter: **[x.com/BroekMeinhardt](https://x.com/BroekMeinhardt/status/2045286354343305692?s=20)**. The web version of this document is at **[dr-crunch.github.io/redundancy-awareness](https://dr-crunch.github.io/redundancy-awareness/)**.
+A structural browser-enabled view of the full evidentiary corpus is available at **[dr-bosch.github.io/sitemap](https://dr-bosch.github.io/sitemap)**. Follow the Twitter account for timely posts regarding the matter: **[x.com/BroekMeinhardt](https://x.com/BroekMeinhardt/status/2045286354343305692?s=20)**. The web version of this document is at **[dr-bosch.github.io/redundancy-awareness](https://dr-bosch.github.io/redundancy-awareness/)**.
 
 ---
 
@@ -60,7 +60,7 @@ This repository is part of the live pre-litigation evidentiary record of the Mei
 | High Court — Writ of Mandamus | In preparation |
 | Hard deadline | **1 July 2026** — Ireland assumes EU Council Presidency |
 
-The *Interregnum Nullificans — A Statement of Record* (March 2026) is the master document of the corpus. It is publicly indexed at [dr-crunch.github.io/sitemap](https://dr-crunch.github.io/sitemap).
+The *Interregnum Nullificans — A Statement of Record* (March 2026) is the master document of the corpus. It is publicly indexed at [dr-bosch.github.io/sitemap](https://dr-bosch.github.io/sitemap).
 
 ---
 
@@ -176,16 +176,16 @@ The Meinhardt Initiative corpus is deployed across several thematic repositories
 
 The full evidentiary record is publicly accessible in structured, navigable form at:
 
-> **[dr-crunch.github.io/sitemap](https://dr-crunch.github.io/sitemap)**
+> **[dr-bosch.github.io/sitemap](https://dr-bosch.github.io/sitemap)**
 
 Suitable for public scrutiny, press engagement, academic review, and judicial reference. Primary entry points:
 
 | Surface | URL |
 |---|---|
-| Dossier — *Scátháin agus Splanc* | [dr-crunch.github.io/nullification-loops/dossier.html](https://dr-crunch.github.io/nullification-loops/dossier.html) |
-| Semantic Map | [dr-crunch.github.io/redundancy-awareness/semantic-map.html](https://dr-crunch.github.io/redundancy-awareness/semantic-map.html) |
-| Tairiscint Mheinhardt | [dr-crunch.github.io/nullification-loops/tairiscint.html](https://dr-crunch.github.io/nullification-loops/tairiscint.html) |
-| Live Presidency Countdown | [dr-crunch.github.io/start-here#deadline](https://dr-crunch.github.io/start-here#deadline) |
+| Dossier — *Scátháin agus Splanc* | [dr-bosch.github.io/nullification-loops/dossier.html](https://dr-bosch.github.io/nullification-loops/dossier.html) |
+| Semantic Map | [dr-bosch.github.io/redundancy-awareness/semantic-map.html](https://dr-bosch.github.io/redundancy-awareness/semantic-map.html) |
+| Tairiscint Mheinhardt | [dr-bosch.github.io/nullification-loops/tairiscint.html](https://dr-bosch.github.io/nullification-loops/tairiscint.html) |
+| Live Presidency Countdown | [dr-bosch.github.io/start-here#deadline](https://dr-bosch.github.io/start-here#deadline) |
 | Full Drive Archive | [Google Drive — Redundancy Awareness](https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g) |
 
 ---
