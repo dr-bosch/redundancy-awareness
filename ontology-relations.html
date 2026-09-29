@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- Snapshot 2026-09-29.
+     Added provenance notice and navigational links to the post-hoc FSD ontology. -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -216,7 +218,28 @@ h1 {
   background:var(--amber-bg);
 }
 
+.fsd-reference {
+  color:var(--purple);
+  border-color:var(--purple-dark);
+  background:rgba(83,74,183,0.12);
+}
+
 .cross-link:hover { opacity:0.85; }
+
+.local-copy-note {
+  margin-bottom:22px;
+  padding:10px 14px;
+  border:1px solid var(--rule);
+  border-left:3px solid var(--purple);
+  color:var(--parchment-dim);
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10px;
+  line-height:1.6;
+}
+
+.local-copy-note a {
+  color:var(--purple);
+}
 
 .interpretive {
   background:var(--surface2);
@@ -441,6 +464,8 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
   <span class="cluster-nav-sep">·</span>
   <span class="current">Relations</span>
   <span class="cluster-nav-sep">·</span>
+  <a href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html">FSD Ontology</a>
+  <span class="cluster-nav-sep">·</span>
   <a href="https://dr-bosch.github.io/redundancy-awareness/failure-modes.html">Failure Modes</a>
   <span class="cluster-nav-sep">·</span>
   <a href="https://dr-bosch.github.io/redundancy-awareness/semantic-map">Semantic Map</a>
@@ -452,9 +477,16 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
 
 <div class="container">
 
+<div class="local-copy-note">
+  <strong>Snapshot September 29th, 2026</strong>
+  Added navigation to the <a href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html">FSD ontology reference</a>.
+  The cross-links are navigational context, not assertions that the two ontologies define equivalent terms or relations.
+</div>
+
 <h1>Ontology Relations</h1>
 <div class="subtitle">
-  Object properties of the OWL 2 ontology and provenance relations of the <em>Interregnum Nullificans</em> corpus — causal operators and evidentiary links connecting actors, instruments, failure modes, and escalation tracks. These are not labels. They are directional mechanisms, each grounded in a named act or omission on the record.
+  Object properties of the OWL 2 ontology and provenance relations of the <em>Interregnum Nullificans</em> corpus — causal operators and evidentiary links connecting actors, instruments, failure modes, and escalation tracks. These are not labels. They are directional mechanisms, each grounded in a named act or omission on the record.<br>
+  <strong>What is OWL?</strong><br>OWL 2 is Web Ontology Language 2, a W3C Recommendation published in October 2009 that serves as a standard for representing rich and complex knowledge on the Semantic Web.
 </div>
 
 <!-- ═══════════════════════════════════════════
@@ -522,7 +554,12 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph nodes</div>
-      <a class="cross-link graph" href="#app">NullificationRecord · McEnteeForeclosureActivity · GunnLetterActivity</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">NullificationRecord · McEnteeForeclosureActivity · GunnLetterActivity</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#determination-classes">Determination classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#object-properties">Submission/body properties</a>
     </div>
   </div>
 </div>
@@ -546,7 +583,11 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph nodes</div>
-      <a class="cross-link graph" href="#app">JCEUA · NullificationRecord · Feb4thForeclosure</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">JCEUA · NullificationRecord · Feb4thForeclosure</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#prohibited-practice-classes">Prohibited-practice classes</a>
     </div>
   </div>
 </div>
@@ -571,7 +612,12 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph nodes</div>
-      <a class="cross-link graph" href="#app">NullificationRecord · OEPAdequacyResponse · McEnteeForeclosureActivity</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">NullificationRecord · OEPAdequacyResponse · McEnteeForeclosureActivity</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#structural-condition-classes">Structural-condition classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#loop-architecture-classes">Loop architecture</a>
     </div>
   </div>
 </div>
@@ -595,7 +641,12 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph nodes</div>
-      <a class="cross-link graph" href="#app">Feb4thForeclosure · GunnLetter · HighCourtTrack · CJEUTrack</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">Feb4thForeclosure · GunnLetter · HighCourtTrack · CJEUTrack</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#swrl-rules">SWRL rule logic</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#loop-architecture-classes">Loop-condition classes</a>
     </div>
   </div>
 </div>
@@ -619,7 +670,12 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph nodes</div>
-      <a class="cross-link graph" href="#app">NullificationRecord · TairiscintMheinhardt · HighCourtTrack</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">NullificationRecord · TairiscintMheinhardt · HighCourtTrack</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#prohibited-practice-classes">Prohibited-practice classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#framework-alignment">Framework alignment</a>
     </div>
   </div>
 </div>
@@ -644,7 +700,7 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph nodes</div>
-      <a class="cross-link graph" href="#app">nullification-loops · start-here · public-relations · press · econ · governmentality-2025 · redundancy-awareness</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">nullification-loops · start-here · public-relations · press · econ · governmentality-2025 · redundancy-awareness</a>
     </div>
   </div>
 </div>
@@ -676,7 +732,7 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph edges</div>
-      <a class="cross-link graph" href="#app">TairiscintMheinhardt → ORCorpus, NullificationRecord, Feb4thForeclosure, GunnLetter, Memorandum, O'Keeffe, Meadows, EUReg2021/821</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">TairiscintMheinhardt → ORCorpus, NullificationRecord, Feb4thForeclosure, GunnLetter, Memorandum, O'Keeffe, Meadows, EUReg2021/821</a>
     </div>
   </div>
 </div>
@@ -701,7 +757,7 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph edges</div>
-      <a class="cross-link graph" href="#app">HighCourtTrack · CJEUTrack · OmbudsmanComplaint · TairiscintDraftingActivity</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">HighCourtTrack · CJEUTrack · OmbudsmanComplaint · TairiscintDraftingActivity</a>
     </div>
   </div>
 </div>
@@ -727,7 +783,12 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph edges</div>
-      <a class="cross-link graph" href="#app">Feb4thForeclosure · GunnLetter · MartinCommitment · ORCorpus · TairiscintMheinhardt · InterregnumNullificansCorpus</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">Feb4thForeclosure · GunnLetter · MartinCommitment · ORCorpus · TairiscintMheinhardt · InterregnumNullificansCorpus</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#institutional-classes">Institutional classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#object-properties">Object properties</a>
     </div>
   </div>
 </div>
@@ -753,7 +814,12 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph edges</div>
-      <a class="cross-link graph" href="#app">All Minister → Department · Official → Organisation edges</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">All Minister → Department · Official → Organisation edges</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#institutional-classes">Institutional classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#object-properties">Object properties</a>
     </div>
   </div>
 </div>
@@ -777,7 +843,7 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph edges</div>
-      <a class="cross-link graph" href="#app">InterregnumNullificansCorpus → all member nodes</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">InterregnumNullificansCorpus → all member nodes</a>
     </div>
   </div>
 </div>
@@ -803,7 +869,7 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph edges</div>
-      <a class="cross-link graph" href="#app">Feb4thForeclosure · GunnLetter · MemorandumToGovernment · TairiscintMheinhardt → their generating activities</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">Feb4thForeclosure · GunnLetter · MemorandumToGovernment · TairiscintMheinhardt → their generating activities</a>
     </div>
   </div>
 </div>
@@ -828,7 +894,7 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph edges</div>
-      <a class="cross-link graph" href="#app">MartinForeknowledgeSpan · McEnteeForeclosureActivity · GunnLetterActivity · MemorandumTransmittalActivity</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">MartinForeknowledgeSpan · McEnteeForeclosureActivity · GunnLetterActivity · MemorandumTransmittalActivity</a>
     </div>
   </div>
 </div>
@@ -853,7 +919,7 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph edges</div>
-      <a class="cross-link graph" href="#app">GunnLetterActivity · MemorandumTransmittalActivity · CompetentAuthorityTransfer2024</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">GunnLetterActivity · MemorandumTransmittalActivity · CompetentAuthorityTransfer2024</a>
     </div>
   </div>
 </div>
@@ -877,7 +943,12 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
     </div>
     <div class="cross-group">
       <div class="cross-label">Graph nodes</div>
-      <a class="cross-link graph" href="#app">NullDetermination2006–2025 → NullificationRecord2006–2025</a>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#app">NullDetermination2006–2025 → NullificationRecord2006–2025</a>
+    </div>
+    <div class="cross-group">
+      <div class="cross-label">Related FSD reference</div>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#determination-classes">Determination classes</a>
+      <a class="cross-link fsd-reference" href="https://dr-bosch.github.io/post-hoc/fsd-ontology.html#swrl-rules">SWRL rule logic</a>
     </div>
   </div>
 </div>
@@ -893,36 +964,36 @@ button.tb:hover { background:var(--color-background-primary); color:var(--color-
   <div class="rel-body">
     The OWL object properties encode the primary causal chain of the Nullification Loop:
     <br><br>
-    <a href="#ignores" style="color:var(--purple);text-decoration:none;font-weight:500">:ignores</a>
-    → <a href="#produces-failure" style="color:var(--purple);text-decoration:none;font-weight:500">:producesFailure</a>
-    → <a href="#triggers" style="color:var(--purple);text-decoration:none;font-weight:500">:triggers</a>
-    → <a href="#violates" style="color:var(--purple);text-decoration:none;font-weight:500">:violates</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#ignores" style="color:var(--purple);text-decoration:none;font-weight:500">:ignores</a>
+    → <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#produces-failure" style="color:var(--purple);text-decoration:none;font-weight:500">:producesFailure</a>
+    → <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#triggers" style="color:var(--purple);text-decoration:none;font-weight:500">:triggers</a>
+    → <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#violates" style="color:var(--purple);text-decoration:none;font-weight:500">:violates</a>
     <br><br>
     The provenance relations encode the evidentiary structure that makes the causal chain legally operable:
     <br><br>
-    <a href="#attributed-to" style="color:var(--amber);text-decoration:none;font-weight:500">:attributedTo</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#attributed-to" style="color:var(--amber);text-decoration:none;font-weight:500">:attributedTo</a>
     names the responsible actor ·
-    <a href="#on-behalf-of" style="color:var(--amber);text-decoration:none;font-weight:500">:onBehalfOf</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#on-behalf-of" style="color:var(--amber);text-decoration:none;font-weight:500">:onBehalfOf</a>
     binds the actor to the institution ·
-    <a href="#generated-by" style="color:var(--amber);text-decoration:none;font-weight:500">:generatedBy</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#generated-by" style="color:var(--amber);text-decoration:none;font-weight:500">:generatedBy</a>
     timestamps the act ·
-    <a href="#derived-from" style="color:var(--amber);text-decoration:none;font-weight:500">:derivedFrom</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#derived-from" style="color:var(--amber);text-decoration:none;font-weight:500">:derivedFrom</a>
     establishes the instrument's grounds ·
-    <a href="#used" style="color:var(--amber);text-decoration:none;font-weight:500">:used</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#used" style="color:var(--amber);text-decoration:none;font-weight:500">:used</a>
     activates the remedy track ·
-    <a href="#informed-by" style="color:var(--amber);text-decoration:none;font-weight:500">:informedBy</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#informed-by" style="color:var(--amber);text-decoration:none;font-weight:500">:informedBy</a>
     sequences the acts ·
-    <a href="#associated-with" style="color:var(--amber);text-decoration:none;font-weight:500">:associatedWith</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#associated-with" style="color:var(--amber);text-decoration:none;font-weight:500">:associatedWith</a>
     contextualises the foreknowledge span ·
-    <a href="#has-member" style="color:var(--amber);text-decoration:none;font-weight:500">:hasMember</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#has-member" style="color:var(--amber);text-decoration:none;font-weight:500">:hasMember</a>
     constitutes the corpus ·
-    <a href="#no-determination" style="color:var(--amber);text-decoration:none;font-weight:500">:noDetermination</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#no-determination" style="color:var(--amber);text-decoration:none;font-weight:500">:noDetermination</a>
     is the absence at the centre of the record
     <br><br>
     The suppression and amplification operators complete the loop:
-    <a href="#suppresses" style="color:var(--green);text-decoration:none;font-weight:500">:suppresses</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#suppresses" style="color:var(--green);text-decoration:none;font-weight:500">:suppresses</a>
     is what the institution does to the civic signal ·
-    <a href="#amplifies" style="color:var(--green);text-decoration:none;font-weight:500">:amplifies</a>
+    <a href="https://dr-bosch.github.io/post-hoc/ontology-relations.html#amplifies" style="color:var(--green);text-decoration:none;font-weight:500">:amplifies</a>
     is what the campaign does to place the record beyond institutional reach.
     <br><br>
     Together, the fourteen relations cover every directional mechanism in the <em>Lúba Neamhnithe</em> graph above: from the first submission in May 2006, through the five documented Silence Veto events, to the three active remedy tracks — High Court, European Ombudsman, and CJEU — and the Presidency Paradox opening on 1 July 2026.
