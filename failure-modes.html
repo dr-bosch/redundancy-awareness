@@ -1,356 +1,201 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Failure Modes · Ontological Instances · Meinhardt Initiative</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=IBM+Plex+Mono:wght@300;400;500&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
-
 <style>
-:root {
-  --ink:#0c0b09;
-  --surface:#141210;
-  --surface2:#1c1a17;
-  --parchment:#e8e3d4;
-  --parchment-dim:#9e9887;
-  --purple:#8b83e8;
-  --green:#2fb882;
-  --green-bg:#0d1f1a;
-  --blue:#4a9fe0;
-  --blue-bg:#0c1929;
-  --amber:#c9a84c;
-  --amber-bg:#1e1509;
-  --rule:rgba(232,227,212,0.12);
-}
-/* ── Cluster nav ── */
-.cluster-nav {
-  background:rgba(13,31,26,0.7);
-  border-bottom:1px solid rgba(47,184,130,0.2);
-  padding:8px 32px;
-  display:flex; align-items:center; gap:0;
-  font-family:'IBM Plex Mono', monospace;
-  font-size:10px; letter-spacing:0.12em; text-transform:uppercase;
-  flex-wrap:wrap;
-}
-.cluster-nav-label { color:rgba(47,184,130,0.4); margin-right:18px; white-space:nowrap; }
-.cluster-nav-sep { color:rgba(158,152,135,0.3); margin:0 10px; }
-.cluster-nav a { color:#9e9887; text-decoration:none; padding:2px 0;
-  border-bottom:1px solid transparent; transition:color 0.15s, border-color 0.15s; }
-.cluster-nav a:hover { color:#e8e3d4; border-bottom-color:#9e9887; }
-.cluster-nav .current { color:var(--green); border-bottom:1px solid #0f6e56; cursor:default; }
-
-
-body {
-  margin:0;
-  background:var(--ink);
-  color:var(--parchment);
-  font-family:'Cormorant Garamond', serif;
-}
-
-.container {
-  max-width:960px;
-  margin:0 auto;
-  padding:56px 32px;
-}
-
-.nav {
-  margin-bottom:28px;
-  font-family:'IBM Plex Mono', monospace;
-  font-size:11px;
-}
-
-.nav a {
-  color:var(--parchment-dim);
-  text-decoration:none;
-  margin-right:18px;
-}
-
-.nav a:hover { color:var(--parchment); }
-
-h1 {
-  font-weight:300;
-  font-size:56px;
-  margin-bottom:8px;
-}
-
-.subtitle {
-  font-style:italic;
-  color:var(--parchment-dim);
-  margin-bottom:40px;
-  max-width:700px;
-}
-
-.section-label {
-  font-family:'IBM Plex Mono', monospace;
-  font-size:11px;
-  letter-spacing:0.12em;
-  text-transform:uppercase;
-  color:var(--parchment-dim);
-  margin-bottom:18px;
-}
-
-.mode {
-  background:var(--surface);
-  border:1px solid var(--rule);
-  border-left:3px solid var(--green);
-  border-radius:4px;
-  padding:20px 22px;
-  margin-bottom:18px;
-}
-
-.mode-name {
-  font-family:'IBM Plex Mono', monospace;
-  font-size:13px;
-  color:var(--green);
-  margin-bottom:6px;
-}
-
-.mode-class {
-  font-family:'IBM Plex Mono', monospace;
-  font-size:11px;
-  color:var(--amber);
-  margin-bottom:10px;
-}
-
-.mode-body {
-  font-family:'EB Garamond', serif;
-  font-size:16px;
-  line-height:1.65;
-}
-
-.cross-links {
-  margin-top:14px;
-  padding-top:12px;
-  border-top:1px solid var(--rule);
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-
-.cross-group {
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  align-items:center;
-}
-
-.cross-label {
-  font-family:'IBM Plex Mono', monospace;
-  font-size:10px;
-  letter-spacing:0.08em;
-  color:var(--parchment-dim);
-  text-transform:uppercase;
-  min-width:75px;
-}
-
-.cross-link {
-  font-family:'IBM Plex Mono', monospace;
-  font-size:11px;
-  text-decoration:none;
-  padding:3px 8px;
-  border-radius:3px;
-  border:1px solid;
-}
-
-.relation {
-  color:#8b83e8;
-  border-color:#3f3a91;
-  background:#15132a;
-}
-
-.evidence {
-  color:var(--blue);
-  border-color:#185fa5;
-  background:var(--blue-bg);
-}
-
-.graph {
-  color:var(--amber);
-  border-color:#854f0b;
-  background:var(--amber-bg);
-}
-
-.cross-link:hover { opacity:0.85; }
-
-.interpretive {
-  background:var(--surface2);
-  border-left:3px solid var(--green);
-}
+:root{--ink:#0c0b09;--surface:#141210;--surface2:#1c1a17;--parchment:#e8e3d4;--parchment-dim:#9e9887;--purple:#8b83e8;--green:#2fb882;--blue:#4a9fe0;--blue-bg:#0c1929;--amber:#c9a84c;--amber-bg:#1e1509;--rule:rgba(232,227,212,0.12)}
+.cluster-nav{background:rgba(13,31,26,0.7);border-bottom:1px solid rgba(47,184,130,0.2);padding:8px 32px;display:flex;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;flex-wrap:wrap}
+.cluster-nav-label{color:rgba(47,184,130,0.4);margin-right:18px;white-space:nowrap}
+.cluster-nav-sep{color:rgba(158,152,135,0.3);margin:0 10px}
+.cluster-nav a{color:#9e9887;text-decoration:none;padding:2px 0;border-bottom:1px solid transparent;transition:color .15s,border-color .15s}
+.cluster-nav a:hover{color:#e8e3d4;border-bottom-color:#9e9887}
+.cluster-nav .current{color:var(--green);border-bottom:1px solid #0f6e56}
+body{margin:0;background:var(--ink);color:var(--parchment);font-family:'Cormorant Garamond',serif}
+a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.container{max-width:960px;margin:0 auto;padding:56px 32px}
+h1{font-weight:300;font-size:56px;margin:0 0 8px}
+.subtitle{font-style:italic;color:var(--parchment-dim);margin-bottom:18px;max-width:700px}
+.retention{font-family:'EB Garamond',serif;font-size:15px;line-height:1.6;color:var(--parchment-dim);max-width:700px;margin-bottom:40px;border-left:2px solid var(--rule);padding-left:14px}
+.section-label{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--parchment-dim);margin-bottom:18px}
+.mode{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--green);border-radius:4px;padding:20px 22px;margin-bottom:18px}
+.mode-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.mode-name{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--green);margin-bottom:6px}
+.stage{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--amber)}
+.mode-class{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--amber);margin-bottom:4px}
+.mode-iri{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--parchment-dim);margin-bottom:10px}
+.alts{font-family:'EB Garamond',serif;font-size:14px;font-style:italic;color:var(--parchment-dim);margin:-4px 0 10px}
+.mode-body{font-family:'EB Garamond',serif;font-size:16px;line-height:1.65}
+.instances{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule)}
+.inst-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--parchment-dim);margin-bottom:6px}
+.instances ul{list-style:none;margin:0;padding:0}
+.instances li{font-family:'EB Garamond',serif;font-size:15px;line-height:1.55;padding:5px 0}
+.instances li .ref{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--blue);display:block}
+.mode-next{margin-top:10px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--parchment-dim)}
+.mode-next a{color:var(--green);text-decoration:none}
+.cross-links{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:6px}
+.cross-group{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.cross-label{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;color:var(--parchment-dim);text-transform:uppercase;min-width:75px}
+.cross-link{font-family:'IBM Plex Mono',monospace;font-size:11px;text-decoration:none;padding:3px 8px;border-radius:3px;border:1px solid}
+.relation{color:#8b83e8;border-color:#3f3a91;background:#15132a}
+.evidence{color:var(--blue);border-color:#185fa5;background:var(--blue-bg)}
+.graph{color:var(--amber);border-color:#854f0b;background:var(--amber-bg)}
+.cross-link:hover{opacity:.85}
+.interpretive{background:var(--surface2)}
+.chain{font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:2;margin:12px 0}
+.chain b{color:var(--green);font-weight:500}
 </style>
-
 </head>
-
 <body>
-
 <div class="container">
 
 <nav class="cluster-nav">
-  <span class="cluster-nav-label">Ontology layer · 4 pages</span>
-  <a href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences">Graph</a>
-  <span class="cluster-nav-sep">·</span>
-  <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html">Relations</a>
-  <span class="cluster-nav-sep">·</span>
-  <span class="current">Failure Modes</span>
-  <span class="cluster-nav-sep">·</span>
-  <a href="https://dr-bosch.github.io/redundancy-awareness/semantic-map">Semantic Map</a>
-  <span class="cluster-nav-sep">·</span>
-  <a href="https://dr-bosch.github.io/redundancy-awareness/epistemological-audit">Epistemological Audit</a>
-  <span class="cluster-nav-sep">·</span>
+  <span class="cluster-nav-label">Ontology layer · 6 pages</span>
+  <a href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences">Graph</a><span class="cluster-nav-sep">·</span>
+  <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html">Relations</a><span class="cluster-nav-sep">·</span>
+  <span class="current">Failure Modes</span><span class="cluster-nav-sep">·</span>
+  <a href="https://dr-bosch.github.io/redundancy-awareness/semantic-map">Semantic Map</a><span class="cluster-nav-sep">·</span>
+  <a href="https://dr-bosch.github.io/redundancy-awareness/epistemological-audit">Epistemological Audit</a><span class="cluster-nav-sep">·</span>
   <a href="https://dr-bosch.github.io/sitemap#site-link-map">Sitemap</a>
 </nav>
 
 <h1>Failure Modes</h1>
-<div class="subtitle">
-Concrete instances generated by institutional processes. Each mode is linked to its causal relations and evidentiary record.
-</div>
+<div class="subtitle">Five recurring outputs of institutional processes, in the order they run. Each is linked to its causal relations and to dated instances in the record.</div>
+<p class="retention">Identifiers on this page are stable: anchors, class names and hashtags have not changed, so links from other pages and posts still work. Display labels and definitions have been conformed; the previous label is shown under each entry.</p>
 
-<div class="section-label">Instances</div>
-
-<!-- Acknowledgement -->
+<div class="section-label">The five modes · stage 1 to 5, then reset</div>
 
 <div id="acknowledgement-as-closure" class="mode">
-  <div class="mode-name">Acknowledgement as Closure</div>
+  <div class="mode-head"><div class="mode-name">Acknowledgement as Closure</div><div class="stage">Stage 1 of 5</div></div>
   <div class="mode-class">FailureMode :: Procedural Termination</div>
-  <div class="mode-body">
-    Formal acknowledgement substitutes for substantive processing, terminating the procedural chain without resolution.
-  </div>
-
+  <div class="mode-iri">:AcknowledgementAsClosure · #AcknowledgementAsClosure</div>
+  <div class="mode-body">A formal acknowledgement stands in for substantive processing and ends the procedural chain without a determination. The output does not depend on the office or the person: an individually signed acknowledgement produced the same result as a form one.</div>
+  <div class="instances"><div class="inst-label">Recorded instances</div><ul>
+    <li><span class="ref">JCHAM · ref. R2025 0106 · 9 Sept 2025</span>Signed acknowledgement of correspondence of 8 Sept 2025; no pathway followed.</li>
+    <li><span class="ref">DOT-TH-03856-2024 · FIN-MO-03632-2024 · DFA-TMO-05256-2024 · DOD-MO-01206-2024 · Jun–Sep 2024</span>Four departments, four acknowledgements, no determination.</li>
+  </ul></div>
+  <div class="mode-next">Next: <a href="#deferral-without-destination">Deferral without Destination</a></div>
   <div class="cross-links">
-    <div class="cross-group">
-      <div class="cross-label">Relations</div>
-      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#ignores">ignores</a>
-      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#violates">violates</a>
-    </div>
-    <div class="cross-group">
-      <div class="cross-label">Evidence</div>
-      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1lvFwZwWpRR2tC4BwsdeR8X0Dxk2mmAwo" target="_blank">Correspondence</a>
-    </div>
-    <div class="cross-group">
-      <div class="cross-label">Graph</div>
-      <a class="cross-link graph" href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences.html">View</a>
-    </div>
-  </div>
-</div>
-
-<!-- Remit -->
-
-<div id="remit-displacement" class="mode">
-  <div class="mode-name">Remit Displacement</div>
-  <div class="mode-class">FailureMode :: Jurisdictional Evasion</div>
-  <div class="mode-body">
-    Responsibility is redirected across institutional boundaries without resolution, diffusing accountability.
-  </div>
-
-  <div class="cross-links">
-    <div class="cross-group">
-      <div class="cross-label">Relations</div>
+    <div class="cross-group"><div class="cross-label">Mode</div>
       <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#produces-failure">producesFailure</a>
-    </div>
-    <div class="cross-group">
-      <div class="cross-label">Evidence</div>
-      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank">Redundancy Awareness · PR</a>
-    </div>
-    <div class="cross-group">
-      <div class="cross-label">Graph</div>
-      <a class="cross-link graph" href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences.html">View</a>
-    </div>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#triggers">triggers</a></div>
+    <div class="cross-group"><div class="cross-label">Process</div>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#ignores">ignores</a>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#violates">violates</a></div>
+    <div class="cross-group"><div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/folders/1lvFwZwWpRR2tC4BwsdeR8X0Dxk2mmAwo" target="_blank" rel="noopener">Correspondence</a></div>
+    <div class="cross-group"><div class="cross-label">Graph</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences.html">View</a></div>
   </div>
 </div>
-
-<!-- Deferral -->
 
 <div id="deferral-without-destination" class="mode">
-  <div class="mode-name">Deferral without Destination</div>
-  <div class="mode-class">FailureMode :: Temporal Evasion</div>
-  <div class="mode-body">
-    Action is indefinitely postponed without assignment to a responsible actor or endpoint.
-  </div>
-
+  <div class="mode-head"><div class="mode-name">Deferral without Destination</div><div class="stage">Stage 2 of 5</div></div>
+  <div class="mode-class">FailureMode :: Temporal Displacement</div>
+  <div class="mode-iri">:DeferralWithoutDestination</div>
+  <div class="alts">Previously labelled: Temporal Evasion</div>
+  <div class="mode-body">Action is postponed without a responsible actor, a timetable or an endpoint.</div>
+  <div class="instances"><div class="inst-label">Recorded instances</div><ul>
+    <li><span class="ref">DFA · 5 Feb 2009</span>Undertaking to produce a report after a technical presentation; no report is recorded as produced.</li>
+    <li><span class="ref">Ministerial undertaking · 25 Sept 2009</span>Undertaking to review and follow up; no follow-up documented. Evidence to be fixed in the Undertakings Register.</li>
+  </ul></div>
+  <div class="mode-next">Next: <a href="#remit-displacement">Remit Displacement</a></div>
   <div class="cross-links">
-    <div class="cross-group">
-      <div class="cross-label">Relations</div>
-      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#ignores">ignores</a>
-      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#triggers">triggers</a>
-    </div>
-    <div class="cross-group">
-      <div class="cross-label">Evidence</div>
-      <a class="cross-link evidence" href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm/view?usp=drive_link" target="_blank">Timeline Record</a>
-    </div>
-    <div class="cross-group">
-      <div class="cross-label">Graph</div>
-      <a class="cross-link graph" href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences.html">View</a>
-    </div>
+    <div class="cross-group"><div class="cross-label">Mode</div>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#produces-failure">producesFailure</a>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#triggers">triggers</a></div>
+    <div class="cross-group"><div class="cross-label">Process</div>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#ignores">ignores</a></div>
+    <div class="cross-group"><div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/file/d/1rVCRvUs91lYDAoo_YIfxpAAsYzEAMMxm/view?usp=drive_link" target="_blank" rel="noopener">Timeline Record</a></div>
+    <div class="cross-group"><div class="cross-label">Graph</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences.html">View</a></div>
   </div>
 </div>
 
-<!-- Sufficiency -->
+<div id="remit-displacement" class="mode">
+  <div class="mode-head"><div class="mode-name">Remit Displacement</div><div class="stage">Stage 3 of 5</div></div>
+  <div class="mode-class">FailureMode :: Jurisdictional Evaporation</div>
+  <div class="mode-iri">:RemitDisplacement · #RemitDisplacement · #JurisdictionalEvaporation</div>
+  <div class="alts">Previously labelled: Jurisdictional Evasion</div>
+  <div class="mode-body">Responsibility is redirected across institutional boundaries. No body holds the whole obligation, so none determines it, and accountability is diffused.</div>
+  <div class="instances"><div class="inst-label">Recorded instances</div><ul>
+    <li><span class="ref">OEP · 2006 (email)</span>Matter placed outside the OEP's coordination remit; no destination named.</li>
+    <li><span class="ref">OEP · 3 July 2009</span>Operations research stated not to fall within the OEP's coordination remit; no statutory account of inapplicability given.</li>
+  </ul></div>
+  <div class="mode-next">Next: <a href="#sufficiency-without-audit">Sufficiency without Audit</a></div>
+  <div class="cross-links">
+    <div class="cross-group"><div class="cross-label">Mode</div>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#produces-failure">producesFailure</a>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#triggers">triggers</a></div>
+    <div class="cross-group"><div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/folders/1pcay_yA1DWwY1BB5KOLLLekr9ub9OYo5" target="_blank" rel="noopener">Redundancy Awareness · PR</a></div>
+    <div class="cross-group"><div class="cross-label">Graph</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences.html">View</a></div>
+  </div>
+</div>
 
 <div id="sufficiency-without-audit" class="mode">
-  <div class="mode-name">Sufficiency without Audit</div>
-  <div class="mode-class">FailureMode :: Assertion Failure</div>
-  <div class="mode-body">
-    Claims of adequacy are made without verification, audit, or evidentiary grounding.
-  </div>
-
+  <div class="mode-head"><div class="mode-name">Sufficiency without Audit</div><div class="stage">Stage 4 of 5</div></div>
+  <div class="mode-class">FailureMode :: Unevaluated Assertion</div>
+  <div class="mode-iri">:SufficiencyWithoutAudit</div>
+  <div class="alts">Previously labelled: Assertion Failure. Doctrinal stage name: sufficiency assertion without evaluation.</div>
+  <div class="mode-body">A claim that existing arrangements are adequate is made without evaluating the specific submitted corpus.</div>
+  <div class="instances"><div class="inst-label">Recorded instances</div><ul>
+    <li><span class="ref">OEP · 1 June 2025</span>States that operations research methods are already in use across many sectors; issued four months and eight days after Storm Éowyn (24 Jan 2025); the corpus was not evaluated.</li>
+    <li><span class="ref">DOD-MO-01201-2025 · closure of 4 Feb 2026</span>Relies on that assertion; the rebuttal of 3 June 2025 is not addressed.</li>
+  </ul></div>
+  <div class="mode-next">Next: <a href="#record-suppression">Record Suppression</a></div>
   <div class="cross-links">
-    <div class="cross-group">
-      <div class="cross-label">Relations</div>
+    <div class="cross-group"><div class="cross-label">Mode</div>
       <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#produces-failure">producesFailure</a>
-    </div>
-    <div class="cross-group">
-      <div class="cross-label">Evidence</div>
-      <a class="cross-link evidence" href="https://drive.google.com/drive/u/0/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank">Formal Complaint</a>
-    </div>
-    <div class="cross-group">
-      <div class="cross-label">Graph</div>
-      <a class="cross-link graph" href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences.html">View</a>
-    </div>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#triggers">triggers</a></div>
+    <div class="cross-group"><div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://drive.google.com/drive/folders/1FMPO1exETcpb4jxX-q5Mh2VIpYwYuATS" target="_blank" rel="noopener">Formal Complaint</a></div>
+    <div class="cross-group"><div class="cross-label">Graph</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences.html">View</a></div>
   </div>
 </div>
 
-<!-- Record suppression -->
-
 <div id="record-suppression" class="mode">
-  <div class="mode-name">Record Suppression</div>
-  <div class="mode-class">FailureMode :: Information Control</div>
-  <div class="mode-body">
-    Relevant records are withheld, omitted, or rendered inaccessible within institutional processes.
-  </div>
-
+  <div class="mode-head"><div class="mode-name">Record Suppression</div><div class="stage">Stage 5 of 5</div></div>
+  <div class="mode-class">FailureMode :: Record Loss or Reset</div>
+  <div class="mode-iri">:RecordSuppression · #SignalSuppression · #DesignedForgetting</div>
+  <div class="alts">Previously labelled: Information Control. The Turtle on Deontological Differences calls this class :SignalSuppression.</div>
+  <div class="mode-body">Records are withheld, deleted or made inaccessible, or the matter returns and is treated as new. Stage 5 returns the process to Stage 1.</div>
+  <div class="instances"><div class="inst-label">Recorded instances</div><ul>
+    <li><span class="ref">JCEUA-I-57 · 7 Oct 2025</span>Declination whose final sentence records that the correspondence was subsequently deleted.</li>
+  </ul></div>
+  <div class="mode-next">Next: resets to <a href="#acknowledgement-as-closure">Acknowledgement as Closure</a> (stage 1)</div>
   <div class="cross-links">
-    <div class="cross-group">
-      <div class="cross-label">Relations</div>
-      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#suppresses">suppresses</a>
-    </div>
-    <div class="cross-group">
-      <div class="cross-label">Evidence</div>
-      <a class="cross-link evidence" href="https://github.com/dr-wojak/press" target="_blank">Archive</a>
-    </div>
-    <div class="cross-group">
-      <div class="cross-label">Graph</div>
-      <a class="cross-link graph" href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences.html">View</a>
-    </div>
+    <div class="cross-group"><div class="cross-label">Mode</div>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#produces-failure">producesFailure</a>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#triggers">triggers</a></div>
+    <div class="cross-group"><div class="cross-label">Process</div>
+      <a class="cross-link relation" href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#suppresses">suppresses</a></div>
+    <div class="cross-group"><div class="cross-label">Evidence</div>
+      <a class="cross-link evidence" href="https://github.com/dr-wojak/press" target="_blank" rel="noopener">Archive</a></div>
+    <div class="cross-group"><div class="cross-label">Graph</div>
+      <a class="cross-link graph" href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences.html">View</a></div>
   </div>
 </div>
 
 <div class="section-label">Interpretation</div>
-
 <div class="mode interpretive">
   <div class="mode-body">
-    Failure modes are not isolated anomalies but repeatable outputs of institutional processes.  
-    Each instance links back to its generating relations, completing the causal chain:
+    Failure modes are repeatable outputs of institutional processes, not isolated anomalies. The chain, stated by level:
+    <div class="chain">
+      Process —<a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#ignores" style="color:var(--green);text-decoration:none">ignores</a>→ Submission<br>
+      Process —<a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#produces-failure" style="color:var(--green);text-decoration:none">producesFailure</a>→ <b>Failure mode</b> —<a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#triggers" style="color:var(--green);text-decoration:none">triggers</a>→ Legal condition<br>
+      Process —<a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#violates" style="color:var(--green);text-decoration:none">violates</a>→ Right
+    </div>
+    The five modes run in order, and stage 5 resets to stage 1. Legal conditions here are matters such as failure of institutional disposition (no determination issued) and Art. 40.3 Bunreacht fair-procedures grounds (<em>O'Keeffe</em>, <em>Meadows</em>). Art. 41 CFR is addressed to EU institutions and is not a target.
     <br><br>
-    <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#ignores" style="color:var(--green);text-decoration:none;font-weight:500">Relation</a>
-    → Process →
-    <span style="color:var(--green);font-weight:500">Failure Mode</span>
-    → <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html#triggers" style="color:var(--green);text-decoration:none;font-weight:500">Legal Condition</a>
-    <br><br>
-    This bidirectional structure enables both analysis and evidentiary navigation.
-    Each failure mode entry links to its generating relations above; each relation on the
+    Navigation runs both ways by link: each mode links to its relations, and each relation on the
     <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html" style="color:var(--green);text-decoration:none;border-bottom:1px solid #0f6e56">Relations page</a>
-    links back here by anchor.
+    links back here by anchor. Inverse properties are not yet declared in the ontology.
   </div>
 </div>
 
@@ -358,20 +203,14 @@ Concrete instances generated by institutional processes. Each mode is linked to 
 
 <footer style="max-width:960px;margin:0 auto;padding:28px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#9e9887;border-top:1px solid rgba(232,227,212,0.08);">
   <div>
-    <a href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences#graph" style="color:#9e9887;text-decoration:none">Graph</a>
-    &nbsp;·&nbsp;
-    <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html" style="color:#9e9887;text-decoration:none">Relations</a>
-    &nbsp;·&nbsp;
-    <a href="https://dr-bosch.github.io/redundancy-awareness/compound-failure-modes.html" style="color:#9e9887;text-decoration:none">Compound Failure Modes</a>
-    &nbsp;·&nbsp;
-    <a href="https://dr-bosch.github.io/redundancy-awareness/semantic-map" style="color:#9e9887;text-decoration:none">Semantic Map</a>
-    &nbsp;·&nbsp;
-    <a href="https://dr-bosch.github.io/nullification-loops/" style="color:#9e9887;text-decoration:none">Main Record</a>
-    &nbsp;·&nbsp;
+    <a href="https://dr-bosch.github.io/redundancy-awareness/deontological-differences#graph" style="color:#9e9887;text-decoration:none">Graph</a> &nbsp;·&nbsp;
+    <a href="https://dr-bosch.github.io/redundancy-awareness/ontology-relations.html" style="color:#9e9887;text-decoration:none">Relations</a> &nbsp;·&nbsp;
+    <a href="https://dr-bosch.github.io/redundancy-awareness/compound-failure-modes.html" style="color:#9e9887;text-decoration:none">Compound Failure Modes</a> &nbsp;·&nbsp;
+    <a href="https://dr-bosch.github.io/redundancy-awareness/semantic-map" style="color:#9e9887;text-decoration:none">Semantic Map</a> &nbsp;·&nbsp;
+    <a href="https://dr-bosch.github.io/nullification-loops/" style="color:#9e9887;text-decoration:none">Main Record</a> &nbsp;·&nbsp;
     <a href="https://dr-bosch.github.io/sitemap#site-link-map" style="color:#9e9887;text-decoration:none">Sitemap</a>
   </div>
   <div style="color:rgba(158,152,135,0.4);text-align:right">Failure Modes · Ontology Layer<br>Meinhardt Initiative · 2006–2026</div>
 </footer>
-
 </body>
 </html>
