@@ -184,7 +184,7 @@ Suitable for public scrutiny, press engagement, academic review, and judicial re
 |---|---|
 | Dossier — *Scátháin agus Splanc* | [dr-bosch.github.io/nullification-loops/dossier.html](https://dr-bosch.github.io/nullification-loops/dossier.html) |
 | Semantic Map | [dr-bosch.github.io/redundancy-awareness/semantic-map.html](https://dr-bosch.github.io/redundancy-awareness/semantic-map.html) |
-| Tairiscint Mheinhardt | [dr-bosch.github.io/nullification-loops/tairiscint.html](https://dr-bosch.github.io/nullification-loops/tairiscint.html) |
+| Tairiscint Mheinhart | [dr-bosch.github.io/nullification-loops/tairiscint.html](https://dr-bosch.github.io/nullification-loops/tairiscint.html) |
 | Live Presidency Countdown | [dr-bosch.github.io/start-here#deadline](https://dr-bosch.github.io/start-here#deadline) |
 | Full Drive Archive | [Google Drive — Redundancy Awareness](https://drive.google.com/drive/u/0/folders/12o4-OPXJ0W5E8pxF9pN-VKUeODagy17g) |
 
